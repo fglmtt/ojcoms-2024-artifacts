@@ -11,6 +11,7 @@ This repository is structured as follows:
 ├── iiot-device/                        # Source code of the IIoT device emulator
 ├── wldt-digital-twin-mqtt/             # Source code of the digital twin 
 ├── k8s/                                # Deployment files and commands
+├── results/                            # Results
 ├── LICENSE                             # License
 └── README.md                           # This file
 ```
