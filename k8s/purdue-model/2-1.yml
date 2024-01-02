@@ -1,0 +1,33 @@
+---
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: physical-broker-2-1-delay
+spec:
+  action: delay
+  mode: all
+  selector:
+    namespaces:
+      - default
+    labelSelectors:
+      'app': 'physical-broker'
+  delay:
+    latency: '70ms'
+    correlation: '25'
+    jitter: '30ms'
+---
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: physical-broker-2-1-loss
+spec:
+  action: loss
+  mode: all
+  selector:
+    namespaces:
+      - default
+    labelSelectors:
+      'app': 'physical-broker'
+  loss:
+    loss: '5'
+    correlation: '25'
